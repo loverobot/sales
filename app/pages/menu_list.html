@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "管理员管理", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main">
+                <div class="article">
+                    <h1 class="page-title row">系统管理 / 菜单管理</h1>
+                    <div class="page-search">
+                        <a href="javascript:;" class="btn btn-warning btn-add fr mj-add"><i class="fa fa-plus" aria-hidden="true"></i> 添加菜单</a>
+                    </div>
+                    <div class="page-main">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>菜单名称</th>
+                                    <th>菜单链接</th>
+                                    <th>排序</th>
+                                    <th>添加时间</th>
+                                    <th class="tc">是否可见</th>
+                                    <th>展示图标</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>系统管理</td>
+                                    <td>/admin/index</td>
+                                    <td>0</td>
+                                    <td>2009-09-24 09:42:37</td>
+                                    <td class="tc"><i class="fa fa-check"></i></td>
+                                    <td>fa-adjust</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-xs btn-info mj-edit" data-values='{"id":"14","parent_id":"0","menu_name":"\u7cfb\u7edf\u7ba1\u7406","menu_link":"\/admin\/index","menu_desc":"\u7cfb\u7edf\u7ba1\u7406","orderby":"0","user_id":"0","add_time":"1253756557","viewcode":"1","action_code":"fa-adjust"}'>修改</a>
+                                        <a href="/admin/menu/menudel?id=14" class="btn btn-xs btn-danger mj-del">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>|--系统管理</td>
+                                    <td>/admin/index</td>
+                                    <td>0</td>
+                                    <td>2009-09-24 09:42:37</td>
+                                    <td class="tc"><i class="fa fa-times"></i></td>
+                                    <td>fa-adjust</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-xs btn-info">修改</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <div class="modal fade" id="package-form" tabindex="-1" role="dialog" aria-labelledby="my-modal-label">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="my-modal-label">添加菜单</h4>
+          </div>
+          <div class="modal-body">
+              <form class="form-horizontal validate-form" id="save-form" method="post" action="/admin/menu/menuedit">
+                <div class="form-group">
+                    <label for="f-menu-name" class="col-sm-3 control-label"><span class="required">*</span> 菜单名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="menu_name" id="f-menu-name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="f-menu-link" class="col-sm-3 control-label"><span class="required">*</span> 菜单链接：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="menu_link" class="form-control" id="f-menu-link">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="f-menu-desc" class="col-sm-3 control-label">菜单描述：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="menu_desc" class="form-control" id="f-menu-desc">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="f-action-code" class="col-sm-3 control-label"><span class="required">*</span> 展示图标：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="action_code" class="form-control" id="f-action-code">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="f-parent-id" class="col-sm-3 control-label">菜单级别：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="parent_id" id="f-parent-id">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="f-orderby" class="col-sm-3 control-label">菜单排序：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="orderby" class="form-control" id="f-orderby" placeholder="数字越小越靠前">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">是否可见：</label>
+                    <div class="col-sm-9">
+                        <div class="radio">
+                            <label class="col-sm-2">
+                                <input type="radio" value="1" name="viewcode" checked> 是
+                            </label>
+                            <label class="col-sm-2">
+                                <input type="radio" value="0" name="viewcode"> 否
+                            </label>
+                        </div>
+                    </div>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="submit" class="btn btn-primary" form="save-form">保存数据</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- build:js /static/scripts/menu_list.js -->
+    <script src="/app/static/scripts/menu_list.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

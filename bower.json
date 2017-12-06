@@ -1,0 +1,56 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "authors": [
+    "myestorm <coolman_84@163.com>"
+  ],
+  "description": "前端项目初始开发环境",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "gulp",
+    "develop",
+    "browsersync",
+    "test",
+    "mocha",
+    "chai"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "vue": "^2.4.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "Font-Awesome#^4.7.0",
+    "decimal.js": "^7.2.4"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    },
+    "vue": {
+      "main": "dist/vue.min.js"
+    }
+  }
+}

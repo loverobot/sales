@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "系统提示", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body class="bg-f8f8f8">
+
+    <div class="page-msg-box">
+        <div class="msg-box-title">
+            系统提示
+        </div>
+        <div class="msg-box-content">
+            <div class="logo"><span>魔镜</span></div>
+            <div class="content">
+                <h2>添加数据成功，即将返回列表</h2>
+                <ul>
+                    <li><span id="count">1</span>秒后将自动跳转到前一页。</li>
+                    <li>如果你的浏览器不支持自动跳转，<a href="javascript:;" class="golink">点这里直接跳转</a>。</li>
+                    <li>或许你想去<a href="/admin/index">首页</a>。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <script>
+    $(document).ready(function(){
+        var link = '<{$links}>';
+        var goLink = function(){
+            link = link ? link : '/';
+            window.location.href = link;
+        };
+        var count = 5;
+        var timer = setInterval(function(){
+            count--;
+            if(count === 0){
+                if(timer){
+                    clearInterval(timer);
+                }
+                goLink();
+            } else {
+                $('#count').text(count);
+            }
+        }, 1000);
+        $('#count').text(count);
+        $('.golink').on('click', goLink);
+    });
+    </script>
+</body>
+</html>

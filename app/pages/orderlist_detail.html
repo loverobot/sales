@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "添加仓库", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main col-md-offset-2">
+                <div class="article">
+                    <h1 class="page-title row">订单管理 / 订单详细</h1>
+                    <div class="page-list">
+                        <table class="table table-bordered table-striped">
+                            <caption>基本信息</caption>
+                            <col class="col-sm-2">
+                            <col class="col-sm-4">
+                            <col class="col-sm-2">
+                            <col class="col-sm-4">
+                            <tbody>
+                                <tr>
+                                    <th class="tr">订单号：</th>
+                                    <td>RK20170809112657542</td>
+                                    <th class="tr">下单人：</th>
+                                    <td>周荣辉</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">下单时间：</th>
+                                    <td>2017-09-11 13:56:37</td>
+                                    <th class="tr">付款时间：</th>
+                                    <td>2017-09-11 13:56:37</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">订单类型：</th>
+                                    <td colspan="3">销售 / 现货现款 / 线下销售</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">客户信息：</th>
+                                    <td>赵本山</td>
+                                    <th class="tr">负责销售：</th>
+                                    <td>丁伟</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">物流信息：</th>
+                                    <td colspan="3">
+                                        出库仓库：柯洁<br>
+                                        快递信息：顺丰 - 35645464
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">订单备注：</th>
+                                    <td colspan="3">100字之内</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-striped">
+                            <caption>产品信息</caption>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>产品名称</th>
+                                    <th>产品编码</th>
+                                    <th>产品条码</th>
+                                    <th>产品状态</th>
+                                    <th>产品单价</th>
+                                    <th>产品数量</th>
+                                    <th>单项合计金额</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>暴风魔镜-IOS版本</td>
+                                    <td>编码1</td>
+                                    <td>ss12345678</td>
+                                    <td>良品</td>
+                                    <td>&yen; 192.68</td>
+                                    <td>4</td>
+                                    <td>&yen; 770.72</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>65寸语音智能电视</td>
+                                    <td>编码2</td>
+                                    <td>cs12345678</td>
+                                    <td>不良品</td>
+                                    <td>&yen; 170.00</td>
+                                    <td>2</td>
+                                    <td>&yen; 340.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <p class="text-right" style="padding-right: 15px; padding-top: 10px;">
+                                            <strong>运费：</strong> &yen; 10.00 &nbsp;&nbsp;&nbsp;
+                                            <strong>优惠信息：</strong>&yen; 100.00 &nbsp;&nbsp;&nbsp;
+                                            <strong>总计：</strong>&yen; 1110.72
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <table class="table table-bordered table-striped">
+                            <caption>收货人信息</caption>
+                            <col class="col-sm-2">
+                            <col class="col-sm-10">
+                            <tbody>
+                                <tr>
+                                    <th class="tr">物流类型：</th>
+                                    <td>邮寄</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">收货人：</th>
+                                    <td>蒋文辉 / 18611112222</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">邮政编码：</th>
+                                    <td>414300</td>
+                                </tr>
+                                <tr>
+                                    <th class="tr">收货地址：</th>
+                                    <td>甘肃 / 天水市 / 甘谷县 / 甘肃天水市甘谷县白家湾乡甘肃省天水市甘谷县白家湾乡蒋家湾村</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-striped">
+                            <caption>审批信息</caption>
+                            <tbody>
+                                <tr>
+                                    <td>审批人：段誉</td>
+                                    <td>审批日期：2017-08-09 11：22 审批通过</td>
+                                    <td>审批意见：同意</td>
+                                </tr>
+                                <tr>
+                                    <td>审批人：虚竹</td>
+                                    <td>审批日期：2017-08-09 11：22 审批通过</td>
+                                    <td>审批意见：同意</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table-btn-s">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-lg btn-block btn-checkall"  data-toggle="modal" data-target="#mj-back-modal">驳回</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-lg btn-block btn-approve js-order-back">同意</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="button" class="btn btn-info btn-lg btn-block btn-approve">返回</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="mj-back-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">驳回理由</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="3" name="reason"></textarea>
+                    <input type="hidden" name="order_num" value="123">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary js-order-back">确定驳回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/orderlist_detail.html") -->
+</body>
+</html>

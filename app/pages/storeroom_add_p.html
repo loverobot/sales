@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "添加仓库", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main col-md-offset-2">
+                <div class="article">
+                    <h1 class="page-title row">系统管理 / 仓库管理 / 添加仓库</h1>
+                    <div class="page-form">
+                        <form class="form-horizontal validate-form" id="storeroom_add_p">
+                            <p class="col-sm-offset-3 col-sm-9">带 <span class="required">*</span> 为必填项目。</p>
+                            <div class="form-group">
+                                <label for="input-2" class="col-sm-3 control-label">批量添加文件：</label>
+                                <div class="col-sm-9">
+                                    <textarea id="input-2" class="form-control" rows="8" name="store_in_batch_list"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-btn" style="padding: 0;">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button type="submit" class="btn btn-primary">提交数据</button>
+                                    <input type="hidden" id="result" value="">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-submit-result">
+                                <div class="col-sm-offset-3 col-sm-9" id="result-show">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/storeroom_add_p.html") -->
+</body>
+</html>

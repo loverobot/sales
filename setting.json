@@ -1,0 +1,12 @@
+{
+    "fileinclude": {
+        "prefix": "<!--@@ ",
+        "suffix": " -->",
+        "basepath": "@file",
+        "context": {
+            "sitename": "暴风魔镜官网 mojing.cn",
+            "separator": " - "
+        }
+    },
+    "staticHosts": "/"
+}

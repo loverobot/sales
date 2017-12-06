@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "用户登录", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body class="login-bg">
+    <canvas id="c" class="login-canvas"></canvas>
+    <div class="container-fluid h100">
+        <div class="login-box">
+            <div class="logo"><img src="/app/static/images/login/logo.png"></div>
+            <div class="login-form">
+                <form id="login-form">
+                    <div class="item form-group">
+                        <input class="form-control input-lg" type="text" placeholder="用户名" name="user_name">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="item form-group">
+                        <input class="form-control input-lg" type="text" placeholder="密码" name="password">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <div class="item form-group">
+                        <input class="form-control input-lg" type="text" placeholder="验证码" name="verify">
+                        <i class="fa fa-shield" aria-hidden="true"></i>
+                        <div class="code-img">
+                            <a href="javascript:;" tabindex="6">
+                                <img data-src="/admin/index/verifycode" src="/admin/index/verifycode" width="78" height="32">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button type="submit" class="btn btn-lg btn-block btn-success">登录系统</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--@@ include("../modules/footer/index.html") -->
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!-- build:js /static/scripts/login.js -->
+    <script src="/app/plugins/ani/index.js"></script>
+    <script src="/app/static/scripts/login.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

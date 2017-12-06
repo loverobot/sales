@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "角色列表", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main">
+                <div class="article">
+                    <h1 class="page-title row">系统管理 / 角色列表</h1>
+                    <div class="page-search">
+                        <a href="grouplist_add.html" class="btn btn-warning btn-add fr"><i class="fa fa-plus" aria-hidden="true"></i> 添加角色</a>
+                    </div>
+                    <div class="page-main">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>权限组</th>
+                                    <th>是否启用</th>
+                                    <th>创建人</th>
+                                    <th>创建时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>超级管理员</td>
+                                    <td>启用</td>
+                                    <td>xuhe</td>
+                                    <td>2014-05-05 16:00:58</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-xs btn-info">修改</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>超级管理员</td>
+                                    <td>启用</td>
+                                    <td>xuhe</td>
+                                    <td>2014-05-05 16:00:58</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-xs btn-info">修改</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mj-pager">
+                        <ul class="pagination">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><span>...</span></li>
+                            <li><a href="#">12</a></li>
+                            <li><a href="#">下一页</a></li>
+                            <li><a href="#">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+</body>
+</html>

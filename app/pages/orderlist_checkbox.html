@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "待审批订单", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main">
+                <div class="article">
+                    <h1 class="page-title row">订单管理 / 待审批订单</h1>
+                    <div class="page-search page-search-table">
+                        <form method="post" action="/a" class="mj-fill-input">
+                            <table>
+                                <tr>
+                                    <th valign="top">付款时间：</th>
+                                    <td valign="top" colspan="2">
+                                        <div class="form-group form-group-date-range">
+                                            <div class="form-group" style="width: 45%;">
+                                                <div class="input-group date mj-time">
+                                                    <input type="text" class="form-control" size="10" readonly>
+                                                    <span class="add-on input-group-addon"><i class="icon-th fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="split" style="width: 10%; text-align: center;"> - </div>
+                                            <div class="form-group" style="width: 45%;">
+                                                <div class="input-group date mj-time">
+                                                    <input type="text" class="form-control" size="10" readonly>
+                                                    <span class="add-on input-group-addon"><i class="icon-th fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td valign="top">
+                                        <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="订单号">
+                                    </td>
+                                    <td valign="top">
+                                        <input type="text" name="store_owner_name" value="" class="form-control" size="20" placeholder="下单人">
+                                    </td>
+                                </tr>
+                                <tr class="m">
+                                    <th valign="top">高级选项：</th>
+                                    <td valign="top">
+                                        <select class="form-control">
+                                            <option>订单类型</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>订单状态</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>审批状态</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>推送状态</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="m">
+                                    <th valign="top">&nbsp;</th>
+                                    <td valign="top">
+                                        <select class="form-control">
+                                            <option>销售类型</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="店铺名称">
+                                    </td>
+                                    <td valign="top">
+                                         <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="客户名称">
+                                    </td>
+                                    <td valign="top">
+                                         <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="负责销售">
+                                    </td>
+                                </tr>
+                                <tr class="m">
+                                    <th valign="top">&nbsp;</th>
+                                    <td valign="top">
+                                        <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="产品名称">
+                                    </td>
+                                    <td valign="top">
+                                         <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="产品条码">
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>产品状态</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="收货人">
+                                    </td>
+                                </tr>
+                                <tr class="m">
+                                    <th valign="top">&nbsp;</th>
+                                    <td valign="top">
+                                        <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="手机号">
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>买家备注</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>卖家留言</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         &nbsp;
+                                    </td>
+                                </tr>
+                                <tr class="btns">
+                                    <th></th>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-checkall"><i class="fa fa-check" aria-hidden="true"></i> 全选</button>
+                                        <button type="button" class="btn btn-success btn-approve"><i class="fa fa-bookmark" aria-hidden="true"></i> 审批</button>
+                                        <button type="submit" class="btn btn-primary" name="search" value="123"><i class="fa fa-search" aria-hidden="true"></i> 搜素</button>
+                                        <button type="submit" class="btn btn-info btn-export" name="search" value="456"><i class="fa fa-save" aria-hidden="true"></i> 导出</button>
+                                    </td>
+                                    <td colspan="3" class="tr">
+                                        <a href="orderlist_add.html" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i> 新增订单</a>
+                                        <a href="orderlist_add_p.html" class="btn btn-danger"><i class="fa fa-list-alt" aria-hidden="true"></i> 导入订单</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="page-main">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>下单时间</th>
+                                    <th>付款时间</th>
+                                    <th>类型</th>
+                                    <th>订单号</th>
+                                    <th>下单人</th>
+                                    <th>销售类型</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="check_input"></td>
+                                    <td>2017-8-30 15:00</td>
+                                    <td>2017-8-30 15:00</td>
+                                    <td>销售</td>
+                                    <td>940</td>
+                                    <td>刘田</td>
+                                    <td>账期经销</td>
+                                    <td>
+                                        <a href="orderlist_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="orderlist_add.html" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger mj-confirm-link">取消订单</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="check_input"></td>
+                                    <td>2017-8-30 15:00</td>
+                                    <td>2017-8-30 15:00</td>
+                                    <td>销售</td>
+                                    <td>940</td>
+                                    <td>刘田</td>
+                                    <td>账期经销</td>
+                                    <td>
+                                        <a href="orderlist_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="orderlist_add.html" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger mj-confirm-link">取消订单</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="check_input"></td>
+                                    <td>2017-8-30 15:00</td>
+                                    <td>2017-8-30 15:00</td>
+                                    <td>销售</td>
+                                    <td>940</td>
+                                    <td>刘田</td>
+                                    <td>账期经销</td>
+                                    <td>
+                                        <a href="orderlist_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="orderlist_add.html" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger mj-confirm-link">取消订单</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--@@ include("../modules/pager/index.html") -->
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/orderlist_checkbox.html") -->
+</body>
+</html>

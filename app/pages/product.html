@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "单品列表", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main">
+                <div class="article">
+                    <h1 class="page-title row">产品管理 / 单品列表</h1>
+                    <div class="page-search">
+                        <div class="page-search-form">
+                            <form method="post" action="/a">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group form-group-date-range">
+                                                    <label class="control-label label-title">选择时间：</label>
+                                                    <div class="form-group">
+                                                        <div class="input-group date mj-date">
+                                                            <input type="text" class="form-control" size="9" readonly>
+                                                            <span class="add-on input-group-addon"><i class="icon-th fa fa-calendar"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="split"> - </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group date mj-date">
+                                                            <input type="text" class="form-control" size="9" readonly>
+                                                            <span class="add-on input-group-addon"><i class="icon-th fa fa-calendar"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option value="1">全部产品</option>
+                                                        <option value="1">在售产品</option>
+                                                        <option value="1">禁用产品</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" style="width: 150px;" placeholder="请输入相关搜索内容">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary" name="search" value="123"><i class="fa fa-search" aria-hidden="true"></i> 搜素</button>
+                                                    <button type="submit" class="btn btn-info btn-export" name="search" value="456"><i class="fa fa-save" aria-hidden="true"></i> 导出</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                        <a href="product_add.html" class="btn btn-warning btn-add fr"><i class="fa fa-plus" aria-hidden="true"></i> 新增产品</a>
+                        <button type="button" class="btn btn-danger btn-exchange fr js-btn-exchange"><i class="fa fa-exchange" aria-hidden="true"></i> 同步</button>
+
+                    </div>
+                    <div class="page-main">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>产品名称</th>
+                                    <th>产品条码</th>
+                                    <th>出货价格</th>
+                                    <th>添加时间</th>
+                                    <th>最后更新时间</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>暴风魔镜-安卓版本</td>
+                                    <td>F7657567246</td>
+                                    <td>&yen;199.00</td>
+                                    <td>2017-04-04</td>
+                                    <td>2018-09-09</td>
+                                    <td>启用</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-primary">历史</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">禁用</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>暴风魔镜-IOS版本</td>
+                                    <td>F7657567246</td>
+                                    <td>&yen;199.00</td>
+                                    <td>2017-04-04</td>
+                                    <td>2018-09-09</td>
+                                    <td>启用</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-primary">历史</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">禁用</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>暴风魔镜-安卓版本</td>
+                                    <td>F7657567246</td>
+                                    <td>&yen;199.00</td>
+                                    <td>2017-04-04</td>
+                                    <td>2018-09-09</td>
+                                    <td>启用</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-primary">历史</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">禁用</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>暴风魔镜-IOS版本</td>
+                                    <td>F7657567246</td>
+                                    <td>&yen;199.00</td>
+                                    <td>2017-04-04</td>
+                                    <td>2018-09-09</td>
+                                    <td>启用</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-primary">历史</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">禁用</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>暴风魔镜-安卓版本</td>
+                                    <td>F7657567246</td>
+                                    <td>&yen;199.00</td>
+                                    <td>2017-04-04</td>
+                                    <td>2018-09-09</td>
+                                    <td>启用</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-primary">历史</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">禁用</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>暴风魔镜-IOS版本</td>
+                                    <td>F7657567246</td>
+                                    <td>&yen;199.00</td>
+                                    <td>2017-04-04</td>
+                                    <td>2018-09-09</td>
+                                    <td>启用</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">编辑</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-primary">历史</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">禁用</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mj-pager">
+                        <ul class="pagination">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><span>...</span></li>
+                            <li><a href="#">12</a></li>
+                            <li><a href="#">下一页</a></li>
+                            <li><a href="#">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/product.html") -->
+</body>
+</html>

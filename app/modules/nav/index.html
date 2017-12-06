@@ -1,0 +1,114 @@
+<aside class="col-md-2 bg-light sidebar">
+    <!--@@ include("../header/index.html") -->
+    <div class="mj-nav">
+        <div class="menu">
+            <h3><i class="fa fa-amazon icon-first"></i> 产品管理 <i class="fa fa-angle-right icon-second"></i></h3>
+            <ul>
+                <li class="current"><a href="product.html">单品</a></li>
+                <li><a href="product_group.html">套装</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3><i class="fa fa-bank icon-first"></i> 仓库管理 <i class="fa fa-angle-right icon-second"></i></h3>
+            <ul>
+                <li><a href="storeroom.html">仓库列表</a></li>
+                <li><a href="storeroom_add.html">新增仓库</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3><i class="fa fa-get-pocket icon-first"></i> 入库管理 <i class="fa fa-angle-right icon-second"></i></h3>
+            <ul>
+                <li><a href="storeinlist.html">入库列表</a></li>
+                <li><a href="storeinlist.html">入库完成</a></li>
+                <li><a href="storein_add.html">入库申请</a></li>
+                <li><a href="storeroom_add_p.html">导入</a></li>
+            </ul>
+        </div>
+        <div class="menu menu-block">
+            <h3><i class="fa fa-money icon-first"></i> 订单管理 <i class="fa fa-angle-right icon-second"></i></h3>
+            <ul>
+                <li><a href="orderlist.html">我的订单</a></li>
+                <li><a href="orderlist_checkbox.html">待审批订单</a></li>
+                <li><a href="orderlist.html">待发货订单</a></li>
+                <li><a href="orderlist.html">已发货订单</a></li>
+                <li><a href="orderlist.html">菜鸟订单</a></li>
+                <li><a href="orderlist_add.html">新增订单</a></li>
+                <li><a href="orderlist_add_p.html">导入</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3><i class="fa fa-bar-chart icon-first"></i> 报表管理 <i class="fa fa-angle-right icon-second"></i></h3>
+            <ul>
+                <li><a href="reportlist.html">订单出库明细报表</a></li>
+                <li><a href="reportlist.html">库存汇总</a></li>
+                <li><a href="reportlist.html">库存明细</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3><i class="fa fa-cog icon-first"></i> 系统管理 <i class="fa fa-angle-right icon-second"></i></h3>
+            <ul>
+                <li><a href="ucenter.html">用户中心</a></li>
+                <li><a href="grouplist.html">角色管理</a></li>
+                <li><a href="adminlist.html">管理员列表</a></li>
+                <li><a href="menu_list.html">管理菜单</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mj-user">
+        <div class="user-info">
+            <div class="user-head"><img src="/app/static/images/global/user.jpg" width="68" height="68" alt=""></div>
+            <div class="user-name">生如夏花</div>
+        </div>
+        <div class="user-actions">
+            <ul>
+                <li><a href="用户中心.html"><i class="fa fa-user"></i>用户中心</a></li>
+                <li><a href="javascript:;" class="mj-edit-user-pw"><i class="fa fa-unlock-alt"></i>修改密码</a></li>
+                <li><a href="#"><i class="fa fa-power-off"></i>退出登陆</a></li>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+<div class="modal fade" id="mj-edit-userpw-dialog" tabindex="-1" role="dialog" aria-labelledby="mj-edit-userpw-form-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="mj-edit-userpw-form-label">修改密码</h4>
+      </div>
+      <div class="modal-body">
+          <form class="form-horizontal validate-form" id="mj-edit-userpw-form" method="post" action="/admin/admin/updatepassword">
+            <div class="form-group">
+                <label for="mj-edit-userpw-form-1" class="col-sm-3 control-label">登录名称：</label>
+                <div class="col-sm-9">
+                    <input type="text" name="name" id="mj-edit-userpw-form-1" class="form-control" value="<{$user.name}>" disabled>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mj-edit-userpw-form-2" class="col-sm-3 control-label">原始密码：</label>
+                <div class="col-sm-9">
+                    <input type="password" name="password" class="form-control" id="mj-edit-userpw-form-2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mj-edit-userpw-form-3" class="col-sm-3 control-label">新密码：</label>
+                <div class="col-sm-9">
+                    <input type="password" name="password_new" class="form-control" id="mj-edit-userpw-form-3">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mj-edit-userpw-form-4" class="col-sm-3 control-label">新密码确认：</label>
+                <div class="col-sm-9">
+                    <input type="password" name="password_again" class="form-control" id="mj-edit-userpw-form-4">
+                </div>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="submit" class="btn btn-primary" form="mj-edit-userpw-form">保存数据</button>
+      </div>
+    </div>
+  </div>
+</div>

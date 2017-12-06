@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "添加单品", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main col-md-offset-2">
+                <div class="article">
+                    <h1 class="page-title row">产品管理 / 单品列表 / 添加单品</h1>
+                    <div class="page-form">
+                        <form class="form-horizontal validate-form" id="product-add-form" method="post" action="//">
+                            <div class="form-group">
+                                <label for="input-1" class="col-sm-2 control-label">产品名称：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="goods_name" class="form-control" id="input-1" placeholder="请输入100个字符以内的产品名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-2" class="col-sm-2 control-label">产品条码：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="goods_code" class="form-control" id="input-2" placeholder="请输入100个字符以内的产品名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-3" class="col-sm-2 control-label">产品颜色：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="color" class="form-control" id="input-3" placeholder="请输入100个字符以内的产品名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4" class="col-sm-2 control-label">产品编码：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="num" class="form-control" id="input-4" placeholder="请输入100个字符以内的产品名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-5" class="col-sm-2 control-label">出货价：</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">&yen;</div>
+                                        <input type="text" name="price" class="form-control" id="input-5" value="0.00">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-5" class="col-sm-2 control-label">相关产品：</label>
+                                <div class="col-sm-10">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%">#</th>
+                                                <th width="40%">产品名称</th>
+                                                <th width="30%">产品条码</th>
+                                                <th width="15%">分摊价格</th>
+                                                <th width="10%">操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mj-package-show">
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td></td><td></td><td></td><td></td>
+                                                <td><button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#package-form">添加产品</button></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <input type="text" name="package_list" class="package-list form-control" id="mj-package-list" value='[{"id":"2","text":"暴风魔镜-IOS版本","code":"ss12345678","share_price":"12"},{"id":"3","text":"65寸语音智能电视","code":"cs12345678","share_price":"15"}]'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="isok" checked> 是否启用
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-btn">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">提交数据</button>
+                                    <button type="reset" class="btn btn-default">重置表单</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <div class="modal fade" id="package-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">添加产品</h4>
+          </div>
+          <div class="modal-body">
+              <form class="form-horizontal validate-form" id="add-products">
+                <div class="form-group">
+                    <label for="mj-get-products" class="col-sm-3 control-label">产品编码：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="mj_get_products" class="form-control" id="mj-get-products" placeholder="请输入关键字搜索产品" autocomplete="off">
+                        <input type="hidden" id="mj-get-products-info" name="get_products_list">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputd-14" class="col-sm-3 control-label">价格分摊：</label>
+                    <div class="col-sm-9">
+                        <div class="input-group input-postion">
+                            <input type="text" name="share_price" class="form-control" id="input-14" value="" autocomplete="off">
+                            <div class="input-group-addon">%</div>
+                        </div>
+                    </div>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="submit" class="btn btn-primary" form="add-products">添加产品</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/product_group_add.html") -->
+</body>
+</html>

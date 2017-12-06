@@ -1,0 +1,56 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "description": "前端项目初始开发环境",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myestorm/gulp_blank.git"
+  },
+  "keywords": [
+    "gulp",
+    "develop",
+    "browsersync",
+    "test",
+    "mocha",
+    "chai"
+  ],
+  "author": "myestorm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myestorm/gulp_blank/issues"
+  },
+  "homepage": "https://github.com/myestorm/gulp_blank#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "chai": "^3.5.0",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^2.0.0",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-file-include": "^1.0.0",
+    "gulp-hash": "^4.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-mocha": "^4.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-svg-symbols": "^2.0.2",
+    "gulp-uglify": "^2.0.1",
+    "gulp-useref": "^3.1.2",
+    "gulp-zip": "^4.0.0",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "lazypipe": "^1.0.1",
+    "map-stream": "0.0.6",
+    "merge-stream": "^1.0.1",
+    "minimist": "^1.2.0",
+    "path": "^0.12.7",
+    "wiredep": "^4.0.0"
+  }
+}

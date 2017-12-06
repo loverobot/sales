@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "添加角色", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main col-md-offset-2">
+                <div class="article">
+                    <h1 class="page-title row">系统管理 / 管理员管理 / 添加管理员</h1>
+                    <div class="page-form">
+                        <form class="form-horizontal validate-form" method="post" action="" id="add-user-form">
+                            <p class="col-sm-offset-2 col-sm-10">带 <span class="required">*</span> 为必填项目。</p>
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label"><span class="required">*</span> 登录名称：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="name" class="form-control" id="username" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-2" class="col-sm-2 control-label"><span class="required">*</span> 登陆密码：</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="password" class="form-control" id="input-2" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-3" class="col-sm-2 control-label">真实姓名：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="true_name" class="form-control" id="input-3" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4" class="col-sm-2 control-label">电子邮箱：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="email" class="form-control" id="input-4" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-5" class="col-sm-2 control-label">联系电话：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="user_tel" class="form-control" id="input-5" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-6" class="col-sm-2 control-label">用户描述：</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="3" name="dept" id="input-6"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label"><span class="required">*</span> 角色权限：</label>
+                                <div class="col-sm-10">
+                                    <div class="checkbox">
+                                        <label class="col-sm-3">
+                                            <input type="checkbox" name="group_id[]" checked>  超级管理员
+                                        </label>
+
+                                        <label class="col-sm-3">
+                                            <input type="checkbox" name="group_id[]">测试组
+                                        </label>
+
+                                        <label class="col-sm-3">
+                                            <input type="checkbox" name="group_id[]"> 角色编辑
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-btn">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">提交数据</button>
+                                    <button type="reset" class="btn btn-default">重置表单</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/adminlist_add.html") -->
+</body>
+</html>

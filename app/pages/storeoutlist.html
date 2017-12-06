@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<!--@@ include("../modules/head/index.html", {"title": "出库列表", "keywords": "keywords", "description": "description"}) -->
+<!--@@ include("../modules/bower/vendor.css.html") -->
+</head>
+
+<body>
+    <div class="container-fluid h100">
+        <div class="row h100">
+            <!--@@ include("../modules/nav/index.html") -->
+            <main class="col-md-10 main">
+                <div class="article">
+                    <h1 class="page-title row">入库管理 / 出库列表</h1>
+                    <div class="page-search page-search-table">
+                        <form method="post" action="/a" class="mj-fill-input">
+                            <table>
+                                <tr>
+                                    <th valign="top">选择时间：</th>
+                                    <td valign="top" colspan="2">
+                                        <div class="form-group form-group-date-range">
+                                            <div class="form-group" style="width: 45%;">
+                                                <div class="input-group date mj-month">
+                                                    <input type="text" class="form-control" size="9" readonly>
+                                                    <span class="add-on input-group-addon"><i class="icon-th fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="split" style="width: 10%; text-align: center;"> - </div>
+                                            <div class="form-group" style="width: 45%;">
+                                                <div class="input-group date mj-date">
+                                                    <input type="text" class="form-control" size="9" readonly>
+                                                    <span class="add-on input-group-addon"><i class="icon-th fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td valign="top">
+                                        <input type="text" name="store_name" value="" class="form-control" size="20" placeholder="入库单号">
+                                    </td>
+                                    <td valign="top">
+                                        <input type="text" name="store_owner_name" value="" class="form-control" size="20" placeholder="产品名称">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th valign="top">高级选项：</th>
+                                    <td valign="top">
+                                        <select class="form-control">
+                                            <option>入库类型</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>产品状态</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>入库仓库</option>
+                                        </select>
+                                    </td>
+                                    <td valign="top">
+                                         <select class="form-control">
+                                            <option>入库状态</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="btns">
+                                    <th></th>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary" name="search" value="123"><i class="fa fa-search" aria-hidden="true"></i> 搜素</button>
+                                        <button type="submit" class="btn btn-info btn-export" name="search" value="456"><i class="fa fa-save" aria-hidden="true"></i> 导出</button>
+                                    </td>
+                                    <td colspan="3" class="tr">
+                                        <a href="storein_add.html" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i> 新增产品</a>
+                                        <a href="storeroom_add_p.html" class="btn btn-danger"><i class="fa fa-list-alt" aria-hidden="true"></i> 批量新增</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="page-main">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>管理员名称</th>
+                                    <th>联系方式</th>
+                                    <th>权限组</th>
+                                    <th>真实姓名</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>xumanli</td>
+                                    <td>18611773521</td>
+                                    <td>超级管理员</td>
+                                    <td>徐赫</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">修改</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">删除</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-success mj-deliver" data-id="<{$store_out.store_out_id}>">发货</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>xumanli</td>
+                                    <td>18611773521</td>
+                                    <td>超级管理员</td>
+                                    <td>徐赫</td>
+                                    <td>
+                                        <a href="product_detail.html" class="btn btn-xs btn-info">详情</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-warning">修改</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-danger">删除</a>
+                                        <a href="javascript:;" class="btn btn-xs btn-success mj-deliver" data-id="<{$store_out.store_out_id}>">发货</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--@@ include("../modules/pager/index.html") -->
+                </div>
+                <!--@@ include("../modules/footer/index.html") -->
+            </main>
+        </div>
+    </div>
+    <div class="modal fade" id="package-deliver-form" tabindex="-1" role="dialog" aria-labelledby="my-modal-label">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="my-modal-label">订单发货</h4>
+          </div>
+          <div class="modal-body">
+              <form class="form-horizontal" id="deliver-sav-form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"><span class="required">*</span> 快递公司：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="store_out_express">
+                          <option value="">请选择快递公司</option>
+                          <option value="SF">顺丰</option>
+                          <option value="YTO">圆通</option>
+                          <option value="ZTO">中通</option>
+                          <option value="EMS">EMS</option>
+                        </select>
+                        <input type="hidden" name="store_out_id" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="f-action-code" class="col-sm-3 control-label"><span class="required">*</span> 快递单号：</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="store_out_express_number" class="form-control" value="">
+                    </div>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="submit" class="btn btn-primary" form="deliver-sav-form">保存数据</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--@@ include("../modules/bower/vendor.js.html") -->
+    <!--@@ include("../modules/scripts/storeoutlist.html") -->
+</body>
+</html>

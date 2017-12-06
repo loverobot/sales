@@ -1,0 +1,9 @@
+{
+    "/bower_components": "bower_components",
+    "/app": "app",
+    "/.build": ".build",
+    "/success": "app/data/success.json",
+    "/manage/store/storeinbatchsubmit": "app/data/manage_store_storeinbatchsubmit.json",
+    "/manage/goods/getrelsinglesajax": "app/data/search_product.json",
+    "/manage/order/checkstatus": "app/data/success.json"
+}
